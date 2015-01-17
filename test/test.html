@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test jQuery Text Marquee</title>
+	<style>
+		.txt-mrq{
+			width: 80px;
+			border: 1px solid #000;
+			max-height: 21px;
+			overflow: hidden;
+			margin: 10px 0;
+			/*padding: 100px 0;*/
+		}
+	</style>
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="../jquery.text-marquee.min.js"></script>
+	<script>
+	$(function() {
+		$(".default-setting div").textMarquee({
+			scrollDirection : 'top'
+		});
+		$(".callback-setting div").textMarquee({
+			onMouseHover: function() {
+				$(this).css({background: '#F00', color: '#FFF'});
+			},
+			onMouseOut: function() {
+				$(this).removeAttr('style');
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<h1 class="title">Default settings</h1>
+		<div class="default-setting">
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+		</div>
+		<h1 class="title">Callback settings</h1>
+		<div class="callback-setting">
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis at rerum alias ut delectus expedita possimus aut, ratione eveniet, quas vitae incidunt harum autem? Deserunt repudiandae voluptate nobis et nulla.</div>
+		</div>
+	</div>
+</body>
+</html>
